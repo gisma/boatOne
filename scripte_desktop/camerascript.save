@@ -1,0 +1,12 @@
+#!bin/bash
+
+#Bildverzeichnis
+IMGDIR='/home/pi/camera'
+
+# Zeitstempel erstellen
+TIME=$(date +$T)
+
+# Dateiname erzeugen
+FILENAM=Bild_%04d_$IMGDIR/${TIME}.jpg
+
+raspistill -w 640 -h 480 -tl 1000 -t 3000 -o /home/pi/camera/Bild_%04d.jpg -n 

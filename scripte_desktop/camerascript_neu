@@ -1,0 +1,12 @@
+#!bin/bash
+
+#Bilderverzeihnis
+IMGDIR='/home/pi/camera'
+
+# Zeitstempel
+#TIME=$(date +%T)
+
+# Dateiname erstellen
+FILENAME=$IMGDIR/Bild_$(date +%T).jpg
+
+raspistill -w 640 -h 480 -tl 1000 -t 5000 -o $FILENAME -n -x GPS.GPSLongitude=5/1,10/1,15/1
