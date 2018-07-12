@@ -19,6 +19,7 @@ https://raspberry.tips/raspberrypi-einsteiger/cronjob-auf-dem-raspberry-pi-einri
 todo:
 
 verkabelung checken, und im script anpassen
+pfade zu den dateien anpassen, zZ wird eine datei immer wieder erweitert 
 
 sicherlich muss noch ein bisschen angepasst werden, ist nicht auf dem raspi getestet worden 
 
