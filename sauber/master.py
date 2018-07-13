@@ -46,10 +46,13 @@ while True:
     #vielleicht auch mehr Zyklen
     for i in range(10):
         lid_data.append(sl.move())
-        temp_data.append( [datetime.datetime.now(), st.temp_messen()] )
+        temp_data.append( [chr(datetime.datetime.now()), st.temp_messen()] )
+    #FEEDBACK LED AN
     save_lid = open("PFAD/ZUR/DATEI/lidar_data.txt", "a")
     save_lid.write(lid_data)
     save_lid.close()
     save_temp = open("PFAD/ZUR/DATEI/temp_data.txt", "a")
     save_temp.write(temp_data)
     save_temp.close()
+    #FEEDBACK LED AUS
+    #NUR ABSCHALTEN WENN LED NICHT LEUCHTET oder FARBCODE gruen rot

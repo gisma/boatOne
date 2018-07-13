@@ -58,7 +58,7 @@ def move():
                 setservo2(j)
                 time.sleep(0.1)
                 dist = lidar.getDistance()
-                erg.append( [chr(date.datetime.now(), i, j,dist] )
+                erg.append( [chr(date.datetime.now()), i, j,dist] )
                 #lid.append(lidar.getDistance())
                 print(i,j, dist)
             c = c+1
@@ -67,7 +67,7 @@ def move():
                 setservo2(j)
                 time.sleep(0.1)
                 dist = lidar.getDistance()
-                erg.append( [chr(date.datetime.now(),i, j,dist] )
+                erg.append( [chr(date.datetime.now()),i, j,dist] )
                 #print(dist)
                 #lid.append(lidar.getDistance())
                 print(i,j, dist)
@@ -81,7 +81,7 @@ def move():
                 setservo2(j)
                 time.sleep(0.1)
                 dist = lidar.getDistance()
-                erg.append( [chr(date.datetime.now(),i, j,dist] )
+                erg.append( [chr(date.datetime.now()),i, j,dist] )
                 #lid.append(lidar.getDistance())
                 #print(i,j, dist)
             c = c+1
@@ -90,7 +90,7 @@ def move():
                 setservo2(j)
                 time.sleep(0.1)
                 dist = lidar.getDistance()
-                erg.append( [chr(date.datetime.now(),i, j,dist] )
+                erg.append( [chr(date.datetime.now()),i, j,dist] )
                 #print(dist)
                 #lid.append(lidar.getDistance())
                 #print(i,j, dist)
@@ -110,13 +110,13 @@ def move():
     #print(erg)
     return(erg)
 
-try:
-  # Endlosschleife Servoansteuerung
-  while True:
-      t1 = time.time()
-      test = move()
-      t2 = time.time()
-      print(t2-t1)
-except KeyboardInterrupt:
-  # Abbruch mit [Strg][C],
-  GPIO.cleanup()
+# #try:
+#   # Endlosschleife Servoansteuerung
+#   while True:
+#       t1 = time.time()
+#       test = move()
+#       t2 = time.time()
+#       print(t2-t1)
+# except KeyboardInterrupt:
+#   # Abbruch mit [Strg][C],
+#   GPIO.cleanup()
